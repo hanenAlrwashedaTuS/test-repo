@@ -1,5 +1,5 @@
 name: print-current-date
-run-name: on the ${{date}}
+run-name: on the ${{github.repo}}
 on: [push]
 jobs:
     get-current-date:
