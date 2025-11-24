@@ -1,0 +1,13 @@
+name: print-current-date
+run-name: on the ${{date}}
+on: [push]
+jobs:
+    get-current-date:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 1) steps can have names LOL
+              run: pwd
+            - name: 2) steps can have names LOL
+              run: date
+            - name: 3) steps can have names LOL
+              run: tree
