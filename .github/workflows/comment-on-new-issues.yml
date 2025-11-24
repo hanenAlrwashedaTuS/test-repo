@@ -1,0 +1,17 @@
+name: comment issues
+on:
+    issues:
+        types:
+            - opened
+jobs:
+    comment-issues-job-ID:
+        name: Job Comment Issues
+        runs-on: ubuntu-latest
+        steps:
+            - name: '1) Step:'
+              uses: peter-evans/create-or-update-comment@v4
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                issue-number: ${{ github.event.issue.number }}
+                body: |
+                    👋 Thanks for opening this issue! We will look into it soon.
