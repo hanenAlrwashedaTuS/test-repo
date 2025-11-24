@@ -1,5 +1,5 @@
 name: Learn Github-Actions
-run-name: ${{github.token}} is learning Github-Actions
+run-name: ${{github.actor}} is learning Github-Actions
 on: [push]
 jobs:
     check-bats-version:
