@@ -13,7 +13,7 @@ jobs:
               run: ls -a
     without-checkout:
         name: without checkout
-        needs: with-checkout
+        needs: with-checkout # this makes the job separated in the UI, which makes sense of course
         runs-on: ubuntu-latest
         steps:
             - name: perform pwd
