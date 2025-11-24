@@ -13,6 +13,7 @@ jobs:
               run: ls -a
     without-checkout:
         name: without checkout
+        needs: with-checkout
         runs-on: ubuntu-latest
         steps:
             - name: perform pwd
