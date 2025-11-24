@@ -1,0 +1,18 @@
+name: perform tree command
+# ommit run-name to see what github will use for the names of the runs
+on: [push]
+jobs:
+    list-content-using-tree:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v5
+            - uses: actions/setup-node@v4
+              with:
+                node-version: '20'
+            - run: npm install -g tree
+            - run: pwd
+            - run: tree
+
+
+
+
