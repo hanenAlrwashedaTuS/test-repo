@@ -1,0 +1,23 @@
+name: show-checkout-difference
+on: push
+jobs:
+    with-checkout:
+        name: with checkout
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v5
+            - name: perform pwd
+              run: pwd
+            - name: perform ls -a 
+              run: ls -a
+    without-checkout:
+        name: without checkout
+        runs-on: ubuntu-latest
+        steps:
+            - name: perform pwd
+              run: pwd
+            - name: perform ls -a
+              run: ls -a
+
+        
